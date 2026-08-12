@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100dvh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:40px;
+    padding-bottom:40px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    background:#120018;
+}
+
+/* Animated Background */
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:linear-gradient(-45deg,#120018,#3b003b,#7b007b,#ff00b3,#7b007b,#3b003b);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    z-index:-1;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:100%;
+    max-width:520px;
+    text-align:center;
+    padding:40px 20px;
+}
+
+/* Title */
+
+.title{
+    font-size:60px;
+    color:white;
+    font-weight:900;
+    letter-spacing:3px;
+    text-shadow:
+    0 0 8px #ff00ff,
+    0 0 18px #ff00ff,
+    0 0 40px #ff33cc,
+    0 0 70px #ff66ff;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+from{
+text-shadow:
+0 0 10px #ff00ff,
+0 0 20px #ff33cc;
+}
+
+to{
+text-shadow:
+0 0 20px #ff00ff,
+0 0 45px #ff33cc,
+0 0 80px #ff66ff;
+}
+
+}
+
+.subtitle{
+
+margin-top:15px;
+margin-bottom:35px;
+font-size:20px;
+color:#ffd6f7;
+letter-spacing:2px;
+
+}
+
+/* Card */
+
+.form-card{
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(18px);
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 15px 50px rgba(255,0,200,.35);
+
+border:1px solid rgba(255,255,255,.25);
+
+animation:fadeUp .8s;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.form-card h2{
+
+color:white;
+
+margin-bottom:25px;
+
+font-size:30px;
+
+}
+
+.form-card input{
+
+width:100%;
+
+padding:16px;
+
+margin:12px 0;
+
+border:none;
+
+border-radius:12px;
+
+font-size:16px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.form-card input:focus{
+
+transform:scale(1.03);
+
+box-shadow:0 0 18px #ff00ff;
+
+}
+
+.form-card input[type=button]{
+
+background:linear-gradient(90deg,#ff00b3,#ff4dd2);
+
+color:white;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+.form-card input[type=button]:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 25px #ff00ff;
+
+}
+
+/* Question Card */
+
+#question{
+
+background:rgba(255,255,255,.10);
+
+padding:35px;
+
+border-radius:25px;
+
+backdrop-filter:blur(18px);
+
+box-shadow:0 15px 50px rgba(255,0,200,.35);
+
+}
+
+#question h2{
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+#question p{
+
+color:white;
+
+font-size:20px;
+
+margin-bottom:25px;
+
+}
+
+#question input{
+
+width:100%;
+
+padding:16px;
+
+margin-bottom:20px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:16px;
+
+}
+
+#question button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:linear-gradient(90deg,#ff00b3,#ff4dd2);
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+#question button:hover{
+
+box-shadow:0 0 25px #ff00ff;
+
+}
+
+/* Thank You */
+
+#success{
+
+color:white;
+
+font-size:24px;
+
+padding:40px;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.title{
+
+font-size:42px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+}
+
+.form-card{
+
+padding:25px;
+
+}
+
+}

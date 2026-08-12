@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <head>
+        <title>Quizzers Anonymous</title>
+    </head>
+    <script>
+
+        
+        function isLogged()
+        {
+            const dataGet = JSON.parse(localStorage.getItem('userData'));
+
+            if(dataGet==null)
+                document.getElementById("login").innerHTML = `
+            <input type="text" id="name" placeholder="Name" title="Enter your Name">
+            <input type="text" id="ph" placeholder="Phone Number" title="Enter your Phone Number">
+            <input type="text" id="roll" placeholder="Roll No" title="Enter your Roll No">
+            <input type="text" id="dept" placeholder="Department" title="Enter your Department">
+            <input type="button" value="SUBMIT" onclick="SUBMIT()">
+        `;
+            else
+                showQuestion();
+        }
+
+        function showQuestion()
+        {
+            const status = JSON.parse(localStorage.getItem("submitStatus"));
+            if(status==null)
+        {
+            document.getElementById('question').innerHTML=`
+            <h1>Question no 1</h1>
+            <p>Who is said to be the Ghost of Uchiha?</p>
+            <input type="text" id="qn" placeholder="Enter the Answer">
+            <input type="button" value="SUBMIT" onclick="postResponse()">
+            `;
+        }
+        }
+
+        async function postResponse() {
+  const dataGet = JSON.parse(localStorage.getItem("userData"));
+  if (!dataGet) {
+    console.error("No user data found in localStorage.");
+    return;
+  }
+
+  const ans = document.getElementById("qn").value;
+
+  const dataPost = {
+    name: dataGet.name,
+    phone: dataGet.phone,
+    roll: dataGet.roll,
+    dept: dataGet.dept,
+    qn: "1",
+    ans: ans,
+    time: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
+  };
+
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbyIqyOP-t5Af9_UTK0Lt692unkxYQgCSDf_fl7Rn1Ojyff_gzjnJFEjVcIBB27pLEwizQ/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(dataPost)
+      }
+    );
+
+    // success path now actually runs on success
+    document.getElementById('question').innerHTML = "";
+    window.alert("Submitted Successfully");
+    localStorage.setItem('submitStatus', JSON.stringify({ status: "submitted" }));
+
+  } catch (err) {
+    console.error("Error:", err);
+    window.alert("Submission failed — please try again.");
+  }
+}
+
+
+        
+        function SUBMIT()
+        {
+
+            
+            const name=document.getElementById("name").value;
+            const phone=document.getElementById("ph").value;
+            const roll = document.getElementById("roll").value;
+            const dept = document.getElementById("dept").value;
+
+            
+            const data =
+            {
+                "name":name,"phone":phone,"roll":roll,"dept":dept
+            }
+            
+
+            localStorage.setItem('userData',JSON.stringify(data));
+
+            document.getElementById("login").innerHTML=" ";
+
+           
+            
+            showQuestion();
+        
+
+            
+
+            
+        }
+
+        document.addEventListener("DOMContentLoaded",isLogged);
+    </script>
+    <body>
+        
+        <div id="login">
+        
+        </div>
+
+        <div id="question">
+
+        </div>
+    </body>
+</html>
