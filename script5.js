@@ -102,7 +102,7 @@ if (status && status.qn === "1" && status.status === "submitted") {
                 QUIZZERS ANONYMOUS
             </h3>
             <p style="color: white; font-size: 16px; margin-bottom: 15px;">
-                THEME:  <strong style="color: #ff4dd2;">CINEMA/strong>
+                THEME:  <strong style="color: #ff4dd2;">CINEMA</strong>
             </p>
 
             <div style="margin-bottom: 15px;">
