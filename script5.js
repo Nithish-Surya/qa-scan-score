@@ -113,7 +113,7 @@ if (status && status.qn === "1" && status.status === "submitted") {
 
             <div style="background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 10px; margin-bottom: 20px;">
                 <span style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #ffd6f7;">⏱ Time Elapsed</span>
-                <div id="timerDisplay" style="font-size: 26px; font-weight: bold; font-family: monospace; color: #ff66ff; margin-top: 2px;">00:00</div>
+                <div id="timerDisplay" style="font-size: 26px; font-weight: bold; font-family: monospace; color: #ffd6f7; margin-top: 2px;">00:00</div>
             </div>
 
             <p style="color: white; font-size: 19px; font-weight: 500; margin-bottom: 20px; line-height: 1.4;">

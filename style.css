@@ -55,7 +55,7 @@ body{
     0 0 8px #ff00ff,
     0 0 18px #ff00ff,
     0 0 40px #ff33cc,
-    0 0 70px #ff66ff;
+    0 0 70px #ffd6f7;
     animation:glow 2s infinite alternate;
 }
 
@@ -71,7 +71,7 @@ to{
 text-shadow:
 0 0 20px #ff00ff,
 0 0 45px #ff33cc,
-0 0 80px #ff66ff;
+0 0 80px #ffd6f7;
 }
 
 }
