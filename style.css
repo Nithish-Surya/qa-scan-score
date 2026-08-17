@@ -166,7 +166,7 @@ box-shadow:0 0 18px #ff00ff;
 
 .form-card input[type=button]{
 
-background:linear-gradient(90deg,#ff00b3,#ff4dd2);
+background:linear-gradient(90deg,#ff00b3,#ffd6f7);
 
 color:white;
 
@@ -246,7 +246,7 @@ border:none;
 
 border-radius:12px;
 
-background:linear-gradient(90deg,#ff00b3,#ff4dd2);
+background:linear-gradient(90deg,#ff00b3,#ffd6f7);
 
 color:white;
 

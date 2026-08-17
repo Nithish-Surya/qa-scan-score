@@ -102,7 +102,7 @@ if (status && status.qn === "1" && status.status === "submitted") {
                 QUIZZERS ANONYMOUS
             </h3>
             <p style="color: white; font-size: 16px; margin-bottom: 15px;">
-                THEME:  <strong style="color: #ff4dd2;">CINEMA</strong>
+                THEME:  <strong style="color: #ffd6f7;">CINEMA</strong>
             </p>
 
             <div style="margin-bottom: 15px;">
@@ -117,7 +117,7 @@ if (status && status.qn === "1" && status.status === "submitted") {
             </div>
 
             <p style="color: white; font-size: 19px; font-weight: 500; margin-bottom: 20px; line-height: 1.4;">
-${questions[targetQuestionIndex]}
+
             </p>
 
             <input type="text" id="answer" placeholder="Type your answer" autocomplete="off">
