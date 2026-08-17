@@ -55,7 +55,7 @@ text-shadow:
 0 0 8px #ff00ff,
 0 0 18px #ff00ff,
 0 0 40px #ff33cc,
-0 0 70px #ffd6f7;
+0 0 70px white;
 animation:glow 2s infinite alternate;
 }
 
@@ -71,7 +71,7 @@ to{
 text-shadow:
 0 0 20px #ff00ff,
 0 0 45px #ff33cc,
-0 0 80px #ffd6f7;
+0 0 80px white;
 }
 
 }
@@ -81,7 +81,7 @@ text-shadow:
 margin-top:15px;
 margin-bottom:35px;
 font-size:20px;
-color:#ffd6f7;
+color:white;
 letter-spacing:2px;
 
 }

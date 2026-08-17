@@ -31,7 +31,7 @@ function showLoginForm() {
   loginEl.style.display = "block";
   loginEl.innerHTML = `
         <div class="form-card">
-            <h3 style="color: #ffd6f7; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">
+            <h3 style="color: white; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">
                 QUIZZERS ANONYMOUS
             </h3>
             <p style="color: white; font-size: 16px; margin-bottom: 20px;">
@@ -99,22 +99,22 @@ if (status && status.qn === "1" && status.status === "submitted") {
   if (questionEl) {
     questionEl.innerHTML = `
         <div class="form-card">
-            <h3 style="color: #ffd6f7; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">
+            <h3 style="color: white; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">
                 QUIZZERS ANONYMOUS
             </h3>
             <p style="color: white; font-size: 16px; margin-bottom: 15px;">
-                THEME:  <strong style="color: #ffd6f7;">MUSIC</strong>
+                THEME:  <strong style="color: white;">MUSIC</strong>
             </p>
 
             <div style="margin-bottom: 15px;">
-                <span style="font-size: 15px; font-weight: bold; color: #ffd6f7;">
+                <span style="font-size: 15px; font-weight: bold; color: white;">
                     Question ${qDisplayNum} of 13
                 </span>
             </div>
 
             <div style="background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 10px; margin-bottom: 20px;">
-                <span style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #ffd6f7;">⏱ Time Elapsed</span>
-                <div id="timerDisplay" style="font-size: 26px; font-weight: bold; font-family: monospace; color: #ffd6f7; margin-top: 2px;">00:00</div>
+                <span style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: white;">⏱ Time Elapsed</span>
+                <div id="timerDisplay" style="font-size: 26px; font-weight: bold; font-family: monospace; color: white; margin-top: 2px;">00:00</div>
             </div>
 
             <p style="color: white; font-size: 19px; font-weight: 500; margin-bottom: 20px; line-height: 1.4;">
@@ -128,7 +128,7 @@ if (status && status.qn === "1" && status.status === "submitted") {
         <div id="confirmModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); backdrop-filter:blur(6px); justify-content:center; align-items:center; z-index:1000;">
             <div class="form-card" style="max-width: 380px; text-align: center; border: 1px solid rgba(255, 0, 255, 0.4);">
                 <h3 style="color: white; margin-bottom: 12px; font-size: 22px;">Submit Answer?</h3>
-                <p style="color: #ffd6f7; font-size: 15px; margin-bottom: 22px;">Are you sure you want to finalize your answer?</p>
+                <p style="color: white; font-size: 15px; margin-bottom: 22px;">Are you sure you want to finalize your answer?</p>
                 <div style="display: flex; gap: 10px;">
                     <input type="button" value="Cancel" onclick="closeModal()" style="background: rgba(255, 255, 255, 0.2); flex: 1;">
                     <input type="button" value="Submit" onclick="processAnswerSubmit()" style="flex: 1;">
@@ -255,11 +255,11 @@ function showSuccess() {
     successEl.style.display = "block";
     successEl.innerHTML = `
         <div class="form-card">
-            <h3 style="color: #ffd6f7; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">
+            <h3 style="color: white; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">
                 QUIZZERS ANONYMOUS
             </h3>
             <h1 style="color: white; font-size: 22px; margin: 10px 0;">Thank You!</h1>
-            <p style="color: #ffd6f7; font-size: 15px;">Your response has been submitted successfully.</p>
+            <p style="color: white; font-size: 15px;">Your response has been submitted successfully.</p>
         </div>
     `;
   }
